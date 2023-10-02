@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    main {
+      padding-top: 35px;
+    }
+  </style>
 </head>
+
 <body>
-    <p>ahoj</p>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="logo" srcset="">
+      </div>
+      <ul class="links">
+        <li><a href="#">Domu</a></li>
+        <li><a href="#">Nejno</a></li>
+        <li><a href="#">Nejpr</a></li>
+        <li><a href="#">Gamers</a></li>
+        <li><a href="#">Kontakty</a></li>
+      </ul>
+      <a href="prihlas.html" class="action_btn">Přihlášení</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu ">
+      <li><a href="#">Domu</a></li>
+      <li><a href="#">Nejno</a></li>
+      <li><a href="#">Nejpr</a></li>
+      <li><a href="#">Gamers</a></li>
+      <li><a href="#">Kontakty</a></li>
+      <li><a href="" class="action_btn">Přihlášení</a></li>
+    </div>
+  </header>
+  <div class="slider middle">
+    <div class="slides">
+      <input type="radio" name="r"
+       id="r1" checked>
+      <input type="radio" name="r"
+       id="r2">
+      <input type="radio" name="r"
+       id="r3">
+       <input type="radio" name="r"
+       id="r4">
+       <input type="radio" name="r"
+       id="r5">
+
+      <div class="slide s1">
+        <img src="sld.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="sld.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="sld.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="sld.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="sld.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="navigace">
+      <label for="r1" class="bar">
+
+      </label>
+      <label for="r2" class="bar">
+
+      </label>
+      <label for="r3" class="bar">
+
+      </label>
+      <label for="r4" class="bar">
+
+      </label>
+      <label for="r5" class="bar">
+
+      </label>
+    </div>
+  </div>
+</div>
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
 </body>
+
 </html>
